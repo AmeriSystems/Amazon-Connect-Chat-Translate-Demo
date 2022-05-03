@@ -108,12 +108,7 @@ const Ccp = () => {
                     let contactAttributes = contact.getAttributes();
                     console.log("CDEBUG ===> contactAttributes: ", JSON.stringify(contactAttributes));
                     let contactQueue = contact.getQueue();
-                    console.log("CDEBUG ===> contactQueue: ", contactQueue);
-                    var attributeMap = contact.getAttributes();
-                    var baseURL = attributeMap.screenPopURL.value;
-                    var searchString = attributeMap.screenPopValue.value;
-                    var screenpopURL = baseURL + searchString;
-                    window.open(screenpopURL)
+                    console.log("CDEBUG ===> contactQueue: ", contactQueue);                   
                 });
 
                 // This is invoked when the chat is accepted
