@@ -109,6 +109,11 @@ const Ccp = () => {
                     console.log("CDEBUG ===> contactAttributes: ", JSON.stringify(contactAttributes));
                     let contactQueue = contact.getQueue();
                     console.log("CDEBUG ===> contactQueue: ", contactQueue);
+                    var attributeMap = contact.getAttributes();
+                    var baseURL = attributeMap.screenPopURL.value;
+                    var searchString = attributeMap.screenPopValue.value;
+                    var screenpopURL = baseURL + searchString;
+                    window.open(screenpopURL)
                 });
 
                 // This is invoked when the chat is accepted
@@ -140,16 +145,6 @@ const Ccp = () => {
                     const cnn = contact.getConnections().find(cnn => cnn.getType() === window.connect.ConnectionType.AGENT);
                     const agentChatSession = await cnn.getMediaController();
                     getEvents(contact, agentChatSession);
-                });
-
-                    connect.contact(function(contact) {
-                contact.onConnecting(function(contact) {
-                    var attributeMap = contact.getAttributes();
-                    var baseURL = attributeMap.screenPopURL.value;
-                    var searchString = attributeMap.screenPopValue.value;
-                    var screenpopURL = baseURL + searchString;
-                    window.open(screenpopURL)
-                    });
                 });
 
                 // This is invoked when new agent data is available
