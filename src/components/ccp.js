@@ -207,8 +207,6 @@ const Ccp = () => {
                 } 
             }
         );
-        function init() {
-        const connectUrl = "https://ameriflex.awsapps.com/connect";
         
         window.connect.agentApp.initApp(
             "customerprofiles", 
@@ -216,7 +214,7 @@ const Ccp = () => {
             connectUrl + "/customerprofiles-v2/",
             { style: "width:400px; height:685px;" }
         );
-      }
+      
         subscribeConnectEvents();
     }, []);
 
