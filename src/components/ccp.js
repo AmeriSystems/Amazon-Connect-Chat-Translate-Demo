@@ -207,7 +207,6 @@ const Ccp = () => {
                 } 
             }
         );
-    } 
       
         subscribeConnectEvents();
     }, []);
