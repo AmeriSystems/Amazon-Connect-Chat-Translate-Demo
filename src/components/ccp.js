@@ -210,7 +210,7 @@ const Ccp = () => {
         function init() {
         const connectUrl = "https://ameriflex.awsapps.com/connect";
         
-        connect.agentApp.initApp(
+        window.connect.agentApp.initApp(
             "customerprofiles", 
             "customerprofiles-container", 
             connectUrl + "/customerprofiles-v2/",
