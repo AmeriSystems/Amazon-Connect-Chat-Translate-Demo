@@ -207,13 +207,7 @@ const Ccp = () => {
                 } 
             }
         );
-        
-        window.connect.agentApp.initApp(
-            "customerprofiles", 
-            "customerprofiles-container", 
-            connectUrl + "/customerprofiles-v2/",
-            { style: "width:400px; height:685px;" }
-        );
+    } 
       
         subscribeConnectEvents();
     }, []);
