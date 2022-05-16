@@ -211,6 +211,16 @@ const Ccp = () => {
         subscribeConnectEvents();
     }, []);
 
+    function init() {
+        const connectUrl = "https://ameriflex.awsapps.com/connect";
+        
+        connect.agentApp.initApp(
+            "customerprofiles", 
+            "customerprofiles-container", 
+            connectUrl + "/customerprofiles-v2/",
+            { style: "width:400px; height:685px;" }
+        );
+      }
 
     return (
         <main>
@@ -220,6 +230,7 @@ const Ccp = () => {
             <div id="ccp-container"></div>
             {/* Translate window will laod here. We pass the agent state to be able to use this to push messages to CCP */}
             <div id="chatroom" ><Chatroom session={agentChatSessionState}/> </div> 
+            <div id="customerprofiles-container"></div>
             </Grid.Row>
           </Grid>
         </main>
